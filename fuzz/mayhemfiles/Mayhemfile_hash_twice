@@ -1,0 +1,6 @@
+project: ate
+target: hash_twice
+duration: 300
+
+cmds:
+  - cmd: /hash_twice

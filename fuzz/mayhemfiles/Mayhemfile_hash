@@ -1,0 +1,6 @@
+project: ate
+target: hash
+duration: 300
+
+cmds:
+  - cmd: /hash
