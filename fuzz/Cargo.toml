@@ -1,0 +1,45 @@
+[package]
+name = "ate-fuzz"
+version = "0.1.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.ate-crypto]
+# DELETE ME: Ensure path is a path relative to this Cargo.toml pointing to
+# DELETE ME: the pacakge you want to import from the repo.
+path = "../crypto"
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "hash"
+path = "fuzz_targets/hash.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "short_hash"
+path = "fuzz_targets/short_hash.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "hash_twice"
+path = "fuzz_targets/hash_twice.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "short_hash_twice"
+path = "fuzz_targets/short_hash_twice.rs"
+test = false
+doc = false
